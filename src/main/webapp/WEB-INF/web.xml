@@ -36,6 +36,20 @@
         <dispatcher>INCLUDE</dispatcher>
         <dispatcher>ERROR</dispatcher>
     </filter-mapping>
+    
+    <filter>
+        <filter-name>FormAuthenticationFilter</filter-name>
+        <filter-class>org.apache.shiro.web.filter.authc.FormAuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FormAuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>ERROR</dispatcher>
+    </filter-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
